@@ -1,6 +1,14 @@
 # Opgavetitel
-Dit navn
+Peter Oliver Neumann Bransner, WU12
 
-Hold nr.
+Valgfri opgave: TBD
 
-Valgfri opgave:
+## Sådan kommer du i gang
+`npm install`
+
+`npm run dev`
+
+## Tech-stack
+
+
+## Kodeeksempel
