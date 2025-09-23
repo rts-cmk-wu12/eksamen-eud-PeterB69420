@@ -17,6 +17,9 @@
     }
 
     &__sign-in {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: variables.$signin-button;
         border: 1px solid variables.$sigin-button-border;
         color: variables.$secondary-color;

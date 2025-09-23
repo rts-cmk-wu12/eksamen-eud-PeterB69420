@@ -28,7 +28,7 @@ export default function Header() {
                     <li className="header__nav-list-item">
                         <Link href="/contact" className={isActive("/contact") ? "header__link--active" : ""} >Contact</Link>
                     </li>
-                    <button className="header__sign-in">Sign in</button>
+                    <Link href="/login" className="header__sign-in">Sign in</Link>
                     <button className="header__register">Register</button>
                 </ul>
             </nav>
