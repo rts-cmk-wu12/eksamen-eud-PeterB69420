@@ -9,12 +9,12 @@ export default function Footer() {
         <footer className="footer">
             <section className="footer__info">
                 <div className="footer__socials">
-                    <Image className="footer__logo" src= "/Logo.svg" alt="SwapHub Logo" width={135} height={40} />
+                    <Image className="footer__logo" src="/Logo.svg" alt="SwapHub Logo" width={135} height={40} />
                     <div className="footer__socials-icons">
-                    <FaXTwitter />
-                    <FaInstagram />
-                    <FaYoutube />
-                    <FaLinkedin />
+                        <FaXTwitter className="footer__socials-icons-item" />
+                        <FaInstagram className="footer__socials-icons-item" />
+                        <FaYoutube className="footer__socials-icons-item" />
+                        <FaLinkedin className="footer__socials-icons-item" />
                     </div>
                 </div>
                 <div className="footer__about">

@@ -21,11 +21,21 @@
     &__socials {
         display: flex;
         flex-direction: column;
+
         &-icons {
             display: flex;
             gap: 0.5rem;
             font-size: 2rem;
-            
+
+
+            &-item {
+                transition: 0.3s;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
         }
     }
 

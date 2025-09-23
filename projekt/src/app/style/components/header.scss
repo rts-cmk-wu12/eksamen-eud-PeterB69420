@@ -23,6 +23,12 @@
         border-radius: 8px;
         width: 83px;
         height: 32px;
+        transition: 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: variables.$active-color;
+        }
     }
 
     &__register {

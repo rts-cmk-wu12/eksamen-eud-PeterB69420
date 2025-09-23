@@ -1,0 +1,14 @@
+@use "../../variables";
+
+.listing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: variables.$primary-color;
+    border-radius: 12px;
+    border: 1px solid variables.$border-color;
+    width: 266px;
+    height: 317px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}

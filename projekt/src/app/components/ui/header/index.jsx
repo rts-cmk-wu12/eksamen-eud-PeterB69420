@@ -7,7 +7,12 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
     const pathname = usePathname();
-    const isActive = (href) => pathname === href;
+    const isActive = (href) => {
+        if (href === "/") {
+            return pathname === "/" || pathname.startsWith("/listings");
+        }
+        return pathname.startsWith(href);
+    }
 
     return (
         <header className="header">

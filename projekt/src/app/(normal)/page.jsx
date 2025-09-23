@@ -1,4 +1,5 @@
 import ListingCard from "../components/ui/listing-card"
+import Pagination from "../components/ui/pagination";
 import Search from "../components/ui/search";
 import "../style/pages/frontpage.scss";
 
@@ -21,6 +22,7 @@ export default async function FrontPage() {
                         <ListingCard key={listings.id} listing={listings} />
                     ))}
                 </div>
+                <Pagination />
             </section>
         </>
     )
