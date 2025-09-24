@@ -5,7 +5,7 @@ Navn: Peter Oliver Neumann Bransner
 
 Hold: WU12
 
-Valgfri opgave: TBD
+Valgfri opgave: C - Opret Bruger
 
 ## Sådan kommer du i gang
 API
@@ -34,6 +34,39 @@ Er et bibliotek der lader dig bruge SVG ikoner i dine projekter. Ikonerne fylder
 * **Zod**
 Er et valideringsbibliotek. Zod kan bruges til at definerer schemas som du kan bruge til validering af data. jeg bruger Zod til validering af bruger input såsom email og password.
 
+* **React-spinners**
+Er et bibliotek, hvor man kan finde animerede loading indicators. Jeg bruger react-spinners på min form, så efter man har trykket submit, vises en loading indicator.
+
 ## Kodeeksempel
 
+Header component (@/components/ui/header)
+
 ```jsx
+export default function Header() {
+    const pathname = usePathname();
+    const isActive = (href) => {
+        if (href === "/") {
+            return pathname === "/" || pathname.startsWith("/listings") || pathname === "/login" || pathname === "/register";
+        }
+        return pathname.startsWith(href);
+    }
+
+    return (
+        <header className="header">
+            <Image src="/Logo.svg" alt="SwapHub Logo" width={135} height={40} />
+            <nav className="header__nav">
+                <ul className="header__nav-list">
+                    <li className="header__nav-list-item">
+                        <Link href="/" className={isActive("/") ? "header__link--active" : ""}>
+                        Listings
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+    )
+}
+```
+**Forklarking af kode**
+Jeg bruger react hooken usePathname fra next navigation til at returnere URL stien i vores browser sådan så vi kan bruge pathname til at vide hvor vi befinder os på siden. Funktionen isActive tjekker hvilken side vi befinder os på og retunere true eller false på baggrund af hvilken side vi er på. Mit if statement tjekker om URL stien er "/", men i stedet for at forsiden er aktiv når vi kun befinder os i "/", vises den også som aktiv når vi er på detajle login og register siden.
+
+I mit Link component bliver der tildelt en dynamisk CSS klasse. Jeg bruger ternary operator som er en betingede operator til at tjekke om klassen er truthy eller falsy.

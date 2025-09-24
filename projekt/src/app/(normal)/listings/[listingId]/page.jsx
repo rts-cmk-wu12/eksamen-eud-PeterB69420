@@ -1,24 +1,24 @@
 import Image from "next/image";
 import "../../../style/pages/listingdetails.scss";
-import { cookies } from "next/headers";
 
+export async function generateMetadata({ params }) {
+    const { listingId } = await params;
 
+    const response = await fetch(`${process.env.API_BASE_URL}/listings/` + listingId);
 
+    const data = await response.json();
+    return {
+        title: data.title
+    }
+}
 
 export default async function ListingDetailPage({ params }) {
     const { listingId } = await params;
-
-    const cookieStore = await cookies();
-    const token = cookieStore.get("auth_token")
-
-    const response = await fetch(`${process.env.API_BASE_URL}/listings/${listingId}`, {
-        headers: {
-            "Authorization": "Bearer" + token
-        }
-    })
+   
+    const response = await fetch(`${process.env.API_BASE_URL}/listings/${listingId}`)
 
     const listing = await response.json()
-
+    console.log(listing)
 
 
     return (
@@ -37,9 +37,9 @@ export default async function ListingDetailPage({ params }) {
                 </div>
             </section>
             <section className="listing-more">
-                <h2 className="listing-more__title">Other items from this Swapper</h2>
+                <h2 className="listing-more__title"><span>Other items from </span>{listing.user.firstname}</h2>
                 <div className="listing-more__items">
-                    
+
                 </div>
             </section>
         </>

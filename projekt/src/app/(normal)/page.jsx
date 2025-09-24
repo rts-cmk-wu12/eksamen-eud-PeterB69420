@@ -1,6 +1,5 @@
 import { cookies } from "next/headers";
 import ListingCard from "../components/ui/listing-card"
-import Pagination from "../components/ui/pagination";
 import Search from "../components/ui/search-field";
 import "../style/pages/frontpage.scss";
 

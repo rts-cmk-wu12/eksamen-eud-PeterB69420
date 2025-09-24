@@ -1,6 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import z from "zod"
 
@@ -21,6 +22,7 @@ export default async function CreateUser(prevState, formData) {
         firstname, lastname, email, password
     });
 
+    /* guard clause */
     if (!validated.success) return {
         ...validated,
         ...(z.treeifyError(validated.error))
@@ -44,13 +46,13 @@ export default async function CreateUser(prevState, formData) {
         })
     });
 
-    /* guard clause */
+    
     if (!response.ok) return {
         success: false,
         errors: ["Noget gik galt!"],
     };
 
+    
     revalidatePath("/");
-
-    return await response.json();
+    redirect("/")
 }
