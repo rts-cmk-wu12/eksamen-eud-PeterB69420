@@ -29,7 +29,7 @@ export default function Header() {
                         <Link href="/contact" className={isActive("/contact") ? "header__link--active" : ""} >Contact</Link>
                     </li>
                     <Link href="/login" className="header__sign-in">Sign in</Link>
-                    <button className="header__register">Register</button>
+                    <Link href="/register" className="header__register">Register</Link>
                 </ul>
             </nav>
         </header>

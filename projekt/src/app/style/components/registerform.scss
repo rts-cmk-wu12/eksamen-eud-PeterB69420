@@ -1,0 +1,53 @@
+@use "../../variables";
+
+.register-form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 500px;
+    height: 350px;
+    border-radius: 12px;
+    border: solid 1px variables.$border-color;
+
+    &__name {
+        display: flex;
+    }
+
+    &__span {
+        text-transform: capitalize;
+        margin-bottom: 0.5rem;
+    }
+
+    &__input {
+        padding: 1rem;
+        height: 40px;
+        border-radius: 8px;
+        outline: none;
+        border: solid 1px variables.$border-color;
+        margin-bottom: 1.5rem;
+    }
+
+    &__button {
+        height: 40px;
+        border: none;
+        border-radius: 8px;
+        color: variables.$primary-color;
+        background-color: variables.$login-button;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__error {
+        color: variables.$error-color;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+}
+
+.login-section {
+    padding: 4rem;
+}
