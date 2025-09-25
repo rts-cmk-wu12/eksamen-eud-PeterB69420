@@ -29,7 +29,7 @@ export default function Search({ listings }) {
     return (
         <div className="frontpage__search">
             <input
-                type="search"
+                type="text"
                 className="frontpage__search-input"
                 placeholder="Search"
                 onChange={searchHandler}

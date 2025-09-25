@@ -1,4 +1,5 @@
-import CreateUserForm from "@/app/components/ui/register-form";
+import CreateUserForm from "@/app/components/ui/forms/register-form";
+import "../../style/components/registerform.scss";
 
 export const metadata = {
     title: "Register",

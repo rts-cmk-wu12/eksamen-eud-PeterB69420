@@ -3,7 +3,7 @@
 import LoginAction from "@/actions/loginaction";
 import { useActionState } from "react";
 import { PuffLoader } from "react-spinners"
-import "../../../style/components/loginform.scss";
+import "../../../../style/components/loginform.scss";
 
 const override = {
     display: "block",

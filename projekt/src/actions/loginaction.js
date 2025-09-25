@@ -21,7 +21,7 @@ export default async function LoginAction(prevState, formData) {
     
     if (!validated.success) return {
         ...validated,
-        ...(z.treeifyError(validated.error)),
+        ...(z.treeifyError(validated.error))
     }
 
     const response = await fetch(`${process.env.API_AUTH_URL}`, {

@@ -32,7 +32,7 @@ Er en udvidelse af CSS, som giver mulighed for variabler, mixins og nesting. SAS
 Er et bibliotek der lader dig bruge SVG ikoner i dine projekter. Ikonerne fylder ingenting og er nemme at benytte og style. Man undgår at downloade billeder som man så skal konvertere til SVG format. 
 
 * **Zod**
-Er et valideringsbibliotek. Zod kan bruges til at definerer schemas som du kan bruge til validering af data. jeg bruger Zod til validering af bruger input såsom email og password.
+Er et valideringsbibliotek. Zod kan bruges til at definerer schemas som du kan bruge til validering af data. Jeg bruger Zod til validering af bruger input i formularer, bl.a. i min login action og create user action.
 
 * **React-spinners**
 Er et bibliotek, hvor man kan finde animerede loading indicators. Jeg bruger react-spinners på min form, så efter man har trykket submit, vises en loading indicator.
@@ -67,6 +67,4 @@ export default function Header() {
 }
 ```
 **Forklarking af kode**
-Jeg bruger react hooken usePathname fra next navigation til at returnere URL stien i vores browser sådan så vi kan bruge pathname til at vide hvor vi befinder os på siden. Funktionen isActive tjekker hvilken side vi befinder os på og retunere true eller false på baggrund af hvilken side vi er på. Mit if statement tjekker om URL stien er "/", men i stedet for at forsiden er aktiv når vi kun befinder os i "/", vises den også som aktiv når vi er på detajle login og register siden.
-
-I mit Link component bliver der tildelt en dynamisk CSS klasse. Jeg bruger ternary operator som er en betingede operator til at tjekke om klassen er truthy eller falsy.
+Jeg bruger react hooken usePathname fra next navigation til at hente URL stien i browseren. Fordi at så ved vi hvor brugeren befinder sig. Funktionen isActive tager href som argument og retunerer derfor true eller false, afhængigt af hvor brugeren befinder sig. Derfor kan vi dynamisk beslutte os over hvilken side vises som aktiv. Derefter har jeg lavet et if statement der fortæller os at forsiden også skal ses som aktiv når man befinder sig på details login og register siden. I mit Link component bliver der tildelt en dynamisk CSS klasse. Jeg bruger ternary operator som er en betingede operator til at tjekke om klassen er truthy eller falsy.
