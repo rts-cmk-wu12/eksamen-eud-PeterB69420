@@ -1,9 +1,14 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: var(--font-inter);
   list-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 a {

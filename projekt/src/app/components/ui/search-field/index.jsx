@@ -1,5 +1,6 @@
 "use client";
 
+// Genbrugt kode med små ændringer
 
 import { useContext, useEffect } from "react";
 import { IoSearch } from "react-icons/io5";
@@ -17,11 +18,6 @@ export default function Search({ listings }) {
     function searchHandler(event) {
         setErrorMsg("");
         const { value } = event.target;
-
-        if (value === "") {
-            setResults(listings);
-            return;
-        }
 
         const filteredData = listings.filter(listing => listing.title.toLowerCase().includes(value));
 
