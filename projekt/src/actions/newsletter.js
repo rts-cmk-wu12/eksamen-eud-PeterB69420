@@ -2,7 +2,6 @@
 
 import { cookies } from "next/headers";
 import z from "zod";
-import { revalidatePath } from "next/cache";
 
 export default async function NewsLetter(prevState, formData) {
     const email = formData.get("email");

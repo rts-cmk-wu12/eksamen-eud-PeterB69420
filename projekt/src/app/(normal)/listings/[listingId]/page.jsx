@@ -1,6 +1,5 @@
 import Image from "next/image";
 import "../../../style/pages/listingdetails.scss";
-import ListingCard from "@/app/components/ui/listing-card";
 import Link from "next/link";
 
 export async function generateMetadata({ params }) {

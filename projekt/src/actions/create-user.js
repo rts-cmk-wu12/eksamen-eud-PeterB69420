@@ -53,6 +53,5 @@ export default async function CreateUser(prevState, formData) {
     };
 
     
-    revalidatePath("/");
     redirect("/")
 }

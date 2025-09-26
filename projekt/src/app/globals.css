@@ -7,10 +7,6 @@
   list-style: none;
 }
 
-*::-webkit-scrollbar {
-  display: none;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -19,4 +15,5 @@ a {
 .main {
   width: 1200px;
   margin: 0 auto;
+  min-height: 80vh;
 }

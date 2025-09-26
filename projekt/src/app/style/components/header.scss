@@ -14,6 +14,9 @@
         list-style: none;
         gap: 2rem;
         align-items: center;
+        &-item:hover {
+            text-decoration: underline;
+        }
     }
 
     &__sign-in {
@@ -46,6 +49,7 @@
         height: 32px;
     }
 
+    
     &__link--active {
         background-color: variables.$active-color;
         border-radius: 5px;

@@ -14,10 +14,9 @@ function list(listing) {
 
 export default function ListingList({ listings }) {
     const [currentPage, setCurrentPage] = useState(1);
-    const listingsPerPage = 4;
+    const listingsPerPage = 8;
 
     const actualList = listings ? listings : useContext(searchContext);
-
     const allListings = actualList?.length ? actualList : actualList?.results || [];
 
     const lastIndex = currentPage * listingsPerPage;
@@ -51,17 +50,15 @@ export default function ListingList({ listings }) {
                     <li className="pagination-item">
                         <button className="pagination-item__button"
                             onClick={prevPage}>
-                            <FaArrowLeft /> Prev
+                            <FaArrowLeft /> Previous
                         </button>
                     </li>
-                    {
-                        numbers.map((n, i) => (
+                    {numbers.map((n, i) => (
                             <li className={`pagination-item ${currentPage === n ? "active" : ""}`} key={i}>
                                 <button className="pagination-item__button"
                                     onClick={() => changePage(n)}>{n}</button>
                             </li>
-                        ))
-                    }
+                    ))}
                     <li className="pagination-item">
                         <button className="pagination-item__button"
                             onClick={nextPage}>

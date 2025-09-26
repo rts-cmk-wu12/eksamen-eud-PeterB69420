@@ -2,6 +2,13 @@
 
 import NewsLetter from "@/actions/newsletter";
 import { useActionState, useEffect } from "react";
+import { PuffLoader } from "react-spinners";
+
+const override = {
+    display: "block",
+    margin: "0 auto",
+}
+
 
 export default function NewsletterForm() {
     const [formState, formAction, isPending] = useActionState(NewsLetter);
@@ -10,7 +17,13 @@ export default function NewsletterForm() {
         console.log(formState)
     }, [formState])
 
-    return (
+    return isPending ?
+        <PuffLoader
+            color="#d9d9d9"
+            loading={true}
+            cssOverride={override}
+            size={320}
+        /> : (
         <form action={formAction} className="newsletter-form">
             <p className="newsletter-form__title">Tilmelding til Nyhedsbrev</p>
             <span className="newsletter-form__span">email</span>
