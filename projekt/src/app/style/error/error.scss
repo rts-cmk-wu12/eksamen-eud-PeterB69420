@@ -1,0 +1,19 @@
+
+.not-found {
+    padding: 2rem;
+    
+    &__msg {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

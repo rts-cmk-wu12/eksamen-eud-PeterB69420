@@ -1,0 +1,17 @@
+@use "../../variables";
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    &-item__button {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: none;
+        background-color: variables.$primary-color;
+        cursor: pointer;
+    }
+}
+

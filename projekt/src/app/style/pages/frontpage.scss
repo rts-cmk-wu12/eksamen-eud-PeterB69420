@@ -1,0 +1,29 @@
+@use "../../variables";
+
+.frontpage {
+    padding: 2rem;
+    &__search {
+        padding: 0 0 2rem;
+
+        &-input {
+            width: 327px;
+            height: 40px;
+            outline: none;
+            border: 1px solid variables.$border-color;
+            padding: 1rem;
+            border-radius: 20px;
+        }
+
+        &-icon {
+            position: relative;
+            left: -35px;
+            top: 4px;
+
+        }
+    }
+
+    &__listings {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

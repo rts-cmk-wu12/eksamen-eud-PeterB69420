@@ -1,0 +1,57 @@
+@use "../../variables";
+
+.header {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 1200px;
+    align-items: center;
+    border-bottom: 1px solid variables.$border-color;
+
+    &__nav-list {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        align-items: center;
+        &-item:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__sign-in {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: variables.$signin-button;
+        border: 1px solid variables.$sigin-button-border;
+        color: variables.$secondary-color;
+        border-radius: 8px;
+        width: 83px;
+        height: 32px;
+        transition: 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: variables.$active-color;
+        }
+    }
+
+    &__register {
+         display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: variables.$secondary-color;
+        color: variables.$primary-color;
+        border: none;
+        border-radius: 8px;
+        width: 83px;
+        height: 32px;
+    }
+
+    
+    &__link--active {
+        background-color: variables.$active-color;
+        border-radius: 5px;
+    }
+}

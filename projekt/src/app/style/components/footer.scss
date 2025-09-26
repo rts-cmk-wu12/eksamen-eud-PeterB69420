@@ -1,0 +1,58 @@
+@use "../../variables";
+
+.footer {
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 1200px;
+    border-top: 1px solid variables.$border-color;
+
+    &__info {
+        display: flex;
+        list-style: none;
+        gap: 12rem;
+        justify-content: center;
+    }
+
+    &__logo {
+        margin-bottom: 1rem;
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+
+        &-icons {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 2rem;
+
+
+            &-item {
+                transition: 0.3s;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    &__about {
+        &-title {
+            font-weight: bolder;
+            margin-bottom: 1rem;
+        }
+
+        &-item {
+            margin-bottom: 0.5rem;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
